@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Products — MyShop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><span class="material-icons">shopping_bag</span> MyShop</a>
+      <div>
+        <a class="btn btn-outline-primary me-2" href="cart.html"><span class="material-icons">shopping_cart</span> Cart <span id="navCartCount2" class="badge bg-primary">0</span></a>
+        <a class="btn btn-outline-secondary" href="login.html">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h3>All Products</h3>
+      <div>
+        <a id="addProductBtn" href="add-product.html" class="btn btn-success shadow-sm d-none"><span class="material-icons">add_circle</span> Add Product</a>
+      </div>
+    </div>
+
+    <div class="row g-4" id="productsRow">
+      <!-- JS will inject product cards -->
+    </div>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    initNavCartCount();
+    renderProducts();
+    toggleAdminAddBtn();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

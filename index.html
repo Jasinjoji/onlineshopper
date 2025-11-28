@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Online Shop — Home</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <span class="material-icons me-2">shopping_bag</span>
+        <strong>MyShop</strong>
+      </a>
+
+      <div>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row align-items-center gap-3">
+          <li><a class="nav-link" href="products.html">Products</a></li>
+          <li><a class="nav-link" href="cart.html"><span class="material-icons">shopping_cart</span> Cart <span id="navCartCount" class="badge bg-primary">0</span></a></li>
+          <li><a class="nav-link" href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="py-5 bg-light">
+    <div class="container text-center">
+      <h1 class="display-5">Welcome to MyShop</h1>
+      <p class="lead">Responsive online shopping demo</p>
+      <a href="products.html" class="btn btn-primary btn-lg shadow-sm">
+        <span class="material-icons align-middle">storefront</span> Shop Now
+      </a>
+    </div>
+  </header>
+
+  <!-- Featured products (rendered dynamically) -->
+  <main class="container my-5">
+    <h3 class="mb-4">Featured Products</h3>
+    <div id="featuredRow" class="row g-4">
+      <!-- JS will inject cards here -->
+    </div>
+  </main>
+
+  <footer class="bg-white border-top py-3">
+    <div class="container text-center text-muted">© <span id="year"></span> MyShop</div>
+
+  <script src="./assets/js/main.js"></script>
+  <script>
+    // page-specific init
+    document.getElementById('year').textContent = new Date().getFullYear();
+    initNavCartCount();
+    renderFeaturedProducts('index');
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

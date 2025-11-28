@@ -1,0 +1,13 @@
+/* styles.css */
+body { background: #f8f9fa; }
+
+/* subtle Material-like shadows and card styles */
+.card { border-radius: 12px; }
+.shadow-sm { box-shadow: 0 2px 6px rgba(0,0,0,0.08) !important; }
+.material-icon-circle { width:36px; height:36px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; background:#eef2ff; }
+.card-img-top {
+  height: 220px;
+  object-fit: contain;
+  padding: 0.75rem;
+  background: #fff;
+}
